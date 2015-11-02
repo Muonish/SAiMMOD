@@ -20,6 +20,7 @@
 @property (strong, nonatomic) IBOutlet NSTextField *averageTimeInQS;
 
 @property (strong, nonatomic) IBOutlet NSTextField *rejectNumber;
+@property (strong, nonatomic) IBOutlet NSTextField *doneNumber;
 @property (strong, nonatomic) IBOutlet NSTextField *requestNumber;
 @property (strong, nonatomic) IBOutlet NSTextField *blockNumber;
 

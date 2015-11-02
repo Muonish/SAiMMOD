@@ -15,11 +15,13 @@
 @property (assign) double pi2;
 
 @property (assign) int requestNumber;
+@property (assign) int doneNumber;
 @property (assign) int rejectNumber;
 @property (assign) int blockNumber;
+@property (assign) int timeInTacts;
+@property (assign) int timeDelayInT1;
 
 - (id)initWithNumber: (int)number pi1: (double)pi1 pi2: (double)pi2;
 - (void)run;
-- (int *)getRequestNumberInTact;
 
 @end

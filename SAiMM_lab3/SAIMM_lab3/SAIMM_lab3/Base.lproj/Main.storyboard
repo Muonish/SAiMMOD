@@ -717,7 +717,7 @@
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hfs-ko-hgg">
                                 <rect key="frame" x="147" y="194" width="80" height="22"/>
                                 <animations/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="100" drawsBackground="YES" id="yEA-eU-7Ra">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="100000" drawsBackground="YES" id="yEA-eU-7Ra">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -805,16 +805,16 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b82-kA-car">
-                                <rect key="frame" x="229" y="91" width="135" height="17"/>
+                                <rect key="frame" x="292" y="88" width="69" height="17"/>
                                 <animations/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Количество отказов:" id="NAF-9D-XGr">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title=" отказано:" id="NAF-9D-XGr">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="svm-4V-FUj">
-                                <rect key="frame" x="236" y="60" width="129" height="17"/>
+                                <rect key="frame" x="232" y="110" width="129" height="17"/>
                                 <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Количество заявок:" id="pYl-ZW-1PB">
                                     <font key="font" metaFont="system"/>
@@ -823,7 +823,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iZF-Uw-7lx">
-                                <rect key="frame" x="368" y="91" width="69" height="17"/>
+                                <rect key="frame" x="368" y="88" width="69" height="17"/>
                                 <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="-----" id="sx5-99-t7X">
                                     <font key="font" metaFont="system"/>
@@ -832,7 +832,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vxG-Gl-mXA">
-                                <rect key="frame" x="368" y="60" width="69" height="17"/>
+                                <rect key="frame" x="368" y="110" width="69" height="17"/>
                                 <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="-----" id="c0k-jN-Wnr">
                                     <font key="font" metaFont="system"/>
@@ -867,6 +867,24 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="895-2M-DE9">
+                                <rect key="frame" x="274" y="67" width="87" height="17"/>
+                                <animations/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title=" обработано:" id="5wO-WJ-xUH">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fbV-aJ-JhE">
+                                <rect key="frame" x="368" y="67" width="69" height="17"/>
+                                <animations/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="-----" id="qDJ-t3-Q6T">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <animations/>
                     </view>
@@ -874,6 +892,7 @@
                         <outlet property="absoluteBandwidth" destination="b8b-bd-Usq" id="w2E-s1-CMO"/>
                         <outlet property="averageTimeInQS" destination="LNE-nt-L7M" id="oTR-te-Qve"/>
                         <outlet property="blockNumber" destination="hWY-Mb-48E" id="Mzd-xq-Ia2"/>
+                        <outlet property="doneNumber" destination="fbV-aJ-JhE" id="pmg-A5-38I"/>
                         <outlet property="pi1" destination="eNg-UQ-bTm" id="0Bg-Od-1zs"/>
                         <outlet property="pi2" destination="6ro-xF-Z2P" id="cGA-CJ-4Ct"/>
                         <outlet property="rejectNumber" destination="iZF-Uw-7lx" id="vRd-EL-I2g"/>

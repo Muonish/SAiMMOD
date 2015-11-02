@@ -31,18 +31,18 @@
 
     [system run];
     [self.rejectNumber setStringValue: [NSString stringWithFormat:@"%d",system.rejectNumber]];
+    [self.doneNumber setStringValue: [NSString stringWithFormat:@"%d",system.doneNumber]];
     [self.requestNumber setStringValue: [NSString stringWithFormat:@"%d",system.requestNumber]];
     [self.blockNumber setStringValue: [NSString stringWithFormat:@"%d",system.blockNumber]];
 
-    double relativeBandwidth = 1 - (double)system.rejectNumber/(double)tactNumber;
-    double absoluteBandwidth = relativeBandwidth/2;
-    int *requestNumberInTact = [system getRequestNumberInTact];
-    double averageTime = ((double)requestNumberInTact[0] * 1 +
-                          (double)requestNumberInTact[1] * 2 +
-                          (double)requestNumberInTact[2] * 3) / tactNumber * 2;
+    double relativeBandwidth = ((double)system.doneNumber)/(double)system.requestNumber;
+    double absoluteBandwidth = ((double)system.doneNumber)/tactNumber;
+
+    NSLog(@"%d", system.timeInTacts + system.timeDelayInT1);
+
     [self.relativeBandwidth setStringValue: [NSString stringWithFormat:@"%f", relativeBandwidth]];
     [self.absoluteBandwidth setStringValue: [NSString stringWithFormat:@"%f", absoluteBandwidth]];
-    [self.averageTimeInQS setStringValue: [NSString stringWithFormat:@"%f", averageTime]];
+    [self.averageTimeInQS setStringValue: [NSString stringWithFormat:@"%f", ((double)system.timeInTacts + (double)system.timeDelayInT1)/(system.requestNumber - system.rejectNumber)]];
     
 }
 
