@@ -13,11 +13,12 @@
 
 @property (strong, nonatomic) IBOutlet NSTextField *pi1;
 @property (strong, nonatomic) IBOutlet NSTextField *pi2;
+@property (strong, nonatomic) IBOutlet NSTextField *ro;
 @property (strong, nonatomic) IBOutlet NSTextField *tactNumber;
 
 @property (strong, nonatomic) IBOutlet NSTextField *absoluteBandwidth;
 @property (strong, nonatomic) IBOutlet NSTextField *relativeBandwidth;
-@property (strong, nonatomic) IBOutlet NSTextField *averageTimeInQS;
+@property (strong, nonatomic) IBOutlet NSTextField *averageLengthQ;
 
 @property (strong, nonatomic) IBOutlet NSTextField *rejectNumber;
 @property (strong, nonatomic) IBOutlet NSTextField *doneNumber;

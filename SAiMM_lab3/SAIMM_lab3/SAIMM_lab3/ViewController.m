@@ -25,9 +25,10 @@
 - (IBAction)startButtonClick:(NSButton *)sender{
     double pi1 = [self.pi1 doubleValue];
     double pi2 = [self.pi2 doubleValue];
+    double ro = [self.ro doubleValue];
     double tactNumber = [self.tactNumber doubleValue];
 
-    QueuingSystem *system = [[QueuingSystem alloc ] initWithNumber:tactNumber pi1:pi1 pi2:pi2];
+    QueuingSystem *system = [[QueuingSystem alloc ] initWithNumber:tactNumber pi1:pi1 pi2:pi2 ro:ro];
 
     [system run];
     [self.rejectNumber setStringValue: [NSString stringWithFormat:@"%d",system.rejectNumber]];
@@ -38,11 +39,10 @@
     double relativeBandwidth = ((double)system.doneNumber)/(double)system.requestNumber;
     double absoluteBandwidth = ((double)system.doneNumber)/tactNumber;
 
-    NSLog(@"%d", system.timeInTacts + system.timeDelayInT1);
 
     [self.relativeBandwidth setStringValue: [NSString stringWithFormat:@"%f", relativeBandwidth]];
     [self.absoluteBandwidth setStringValue: [NSString stringWithFormat:@"%f", absoluteBandwidth]];
-    [self.averageTimeInQS setStringValue: [NSString stringWithFormat:@"%f", ((double)system.timeInTacts + (double)system.timeDelayInT1)/(system.requestNumber - system.rejectNumber)]];
+    [self.averageLengthQ setStringValue: [NSString stringWithFormat:@"%f", (double)system.timesInQueue/tactNumber]];
     
 }
 
